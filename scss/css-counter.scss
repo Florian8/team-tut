@@ -10,7 +10,7 @@
 		counter-reset: newList;
 	}
 	&__list-2-element::after {
-		content: "Tillägg: " counter(newList);
+		content: attr(data-word) counter(newList);
 		counter-increment: newList;
 	}
 }
@@ -67,6 +67,26 @@
 			color: #fff;
 			display: block;
 			padding: 2px 0;
+		}
+	}
+}
+
+a[title] {
+	display: inline-block;
+	position: relative;
+
+	&:hover {
+		&::after {
+			background-color: #333;
+			color: #fff;
+			content: attr(title);
+			display: block;
+			padding: 4px 2px;
+			position: absolute;
+			right: -96px;
+			text-align: center;
+			top: -14px;
+			width: 88px;
 		}
 	}
 }

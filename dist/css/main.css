@@ -45,7 +45,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@charset "UTF-8";
 .css-counter__list-1 {
   counter-reset: list; }
 
@@ -57,7 +56,7 @@ table {
   counter-reset: newList; }
 
 .css-counter__list-2-element::after {
-  content: "Tillägg: " counter(newList);
+  content: attr(data-word) counter(newList);
   counter-increment: newList; }
 
 .css-counter {
@@ -98,6 +97,21 @@ table {
       display: block;
       padding: 2px 0; }
 
+a[title] {
+  display: inline-block;
+  position: relative; }
+  a[title]:hover::after {
+    background-color: #333;
+    color: #fff;
+    content: attr(title);
+    display: block;
+    padding: 4px 2px;
+    position: absolute;
+    right: -96px;
+    text-align: center;
+    top: -14px;
+    width: 88px; }
+
 body {
   font-family: Avenir, Arial, Sans-Serif;
   font-size: 100%; }
@@ -119,5 +133,5 @@ h3 {
 h4 {
   padding-bottom: 3px; }
 
-.content-holder {
+main {
   padding: 1.5em; }

@@ -1,0 +1,72 @@
+.css-counter {
+	&__list-1 {
+		counter-reset: list;
+	}
+	&__list-1-element::before {
+		content: counter(list);
+		counter-increment: list;
+	}
+	&__list-2 {
+		counter-reset: newList;
+	}
+	&__list-2-element::after {
+		content: "Tillägg: " counter(newList);
+		counter-increment: newList;
+	}
+}
+
+.css-counter {
+	max-width: 1000px;
+	
+	&__list-1 {
+		
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+	&__list-1-container {
+		display: table;
+		overflow: hidden;
+		width: 100%;
+	}
+	&__list-1-element {
+		display: table-cell;
+		line-height: 1.2;
+		width: 33%;
+		
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			width: 86%;
+		}
+		
+		&::before {
+			background-color: #333;
+			border-radius: 15px;
+			color: #fff;
+			display: inline-block;
+			margin-right: 5px;
+			padding: 6px 11px 5px 11px;
+		}
+	}
+	&__list-2 {
+		margin-top: 20px;
+	}
+	&__list-2-element {
+		padding: 15px 0;
+		
+		h4 {
+			margin-top: 3px;
+		}
+		
+		&::after {
+			background-color: #333;
+			color: #fff;
+			display: block;
+			padding: 2px 0;
+		}
+	}
+}

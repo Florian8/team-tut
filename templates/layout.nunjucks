@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang=sv">
+	<head>
+		<meta charset="utf-8">
+		<title>Demos</title>
+		<meta name="description" content="Olika demos">
+		<meta name="author" content="Florian">
+		<link rel="stylesheet" type="text/css" href="/dist/css/main.css">
+	</head>
+	<body>
+		<div class="content-holder">
+			{% block content %} {% endblock %}
+		</div>
+	</body>
+</html>

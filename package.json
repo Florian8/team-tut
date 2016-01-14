@@ -1,0 +1,26 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "different demos for the team",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {},
+  "author": "Florian",
+  "license": "UNLICENSED",
+  "homepage": "https://localhost:8880",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-nunjucks-render": "^1.1.0",
+    "gulp-sass": "^2.1.1"
+  },
+  "dependencies": {},
+  "keywords": [
+    "html5",
+    "css3",
+    "js"
+  ]
+}
